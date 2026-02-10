@@ -1,0 +1,8 @@
+{
+  "name": "assis_agent_caller",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  }
+}

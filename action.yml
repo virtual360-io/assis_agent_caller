@@ -1,0 +1,26 @@
+name: "Assis Agent Caller"
+description: "Calls any Assis agent via API and returns the output"
+inputs:
+  api-url:
+    description: "Full Assis agent API URL (includes agent ID)"
+    required: true
+  api-token:
+    description: "Assis API authentication token"
+    required: true
+  input:
+    description: "Content to send to the Assis agent"
+    required: true
+  context:
+    description: "Context identifier for the agent call (e.g. github_action, github_action_release)"
+    required: false
+    default: "github_action"
+  source-url:
+    description: "Optional URL for agent_source (e.g. PR URL, release URL)"
+    required: false
+    default: ""
+outputs:
+  output:
+    description: "Assis agent response"
+runs:
+  using: "node20"
+  main: "index.js"
