@@ -14,7 +14,7 @@ async function callAgent(apiUrl, apiToken, input, context, sourceUrl) {
     },
     agent_source: {
       database: null,
-      url: sourceUrl || null,
+      url: sourceUrl || apiUrl,
       context: context,
       client_name: null,
     },
