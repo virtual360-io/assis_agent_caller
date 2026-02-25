@@ -31,8 +31,7 @@ async function callAgent(apiUrl, apiToken, input, context, sourceUrl) {
   });
 
   if (!response.ok) {
-    const data = await response.json();
-    throw new Error(`Assis API call failed with status ${response.status}: ${data["output"]}`);
+    throw new Error(`Assis API call failed with status ${response.status}: ${JSON.stringify(data)}`);
   }
 
   const data = await response.json();
